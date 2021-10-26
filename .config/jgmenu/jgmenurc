@@ -1,0 +1,44 @@
+terminal_exec       = kitty
+terminal_args       = -e
+tint2_look          = 1
+at_pointer          = 0
+hide_on_startup     = 0
+menu_margin_x       = 10
+menu_margin_y       = 10
+menu_width          = 200
+#menu_height_min     = 300
+#menu_height_max     = 300
+menu_height_mode    = dynamic
+menu_padding_top    = 0
+menu_padding_right  = 0
+menu_padding_bottom = 0
+menu_padding_left   = 0
+menu_radius         = 0
+menu_border         = 0
+menu_halign         = left
+menu_valign         = bottom
+
+font                 = M+2 c medium 9
+icon_size            = 15
+#icon_text_spacing   = 10
+#icon_theme          =
+#icon_theme_fallback = xtg
+
+sub_spacing         = 1
+sub_padding_top     = 1
+sub_padding_right   = 1
+sub_padding_bottom  = 1
+sub_padding_left    = 1
+sub_hover_action    = 1
+
+color_menu_bg       = #16161e 90
+color_menu_border   = #f9f9f9 90
+
+color_norm_bg       = #f9f9f9 0
+color_norm_fg       = #ffffff 100
+
+color_sel_bg        = #f9f9f9 85
+color_sel_fg        = #42457c 85
+color_sel_border    = #f9f9f9 0
+
+color_sep_fg        = #ffffff 0
