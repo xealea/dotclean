@@ -121,11 +121,11 @@ panel_margin = 0 0
 panel_padding = 15 10 10
 panel_background_id = 1
 wm_menu = 1
-panel_dock = 0
+panel_dock = 1
 panel_position = bottom center horizontal
 panel_layer = bottom
 panel_monitor = all
-panel_shrink = 1
+panel_shrink = 0
 autohide = 0
 autohide_show_timeout = 0
 autohide_hide_timeout = 0
@@ -238,17 +238,17 @@ ac_disconnected_cmd =
 # Button 1
 button = new
 button_text =
-button_icon = ~/.config/tint2/icons/baka/launch.png
+button_icon = ~/.icons/Tela-circle/24/actions/search.svg
 button_tooltip = Launcher
-button_lclick_command = rofi -show drun
-button_rclick_command = rofi -show drun
+button_lclick_command = rofi -dmenu
+button_rclick_command = rofi -dmenu
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 
 button_font = Material 17
 button_font_color = #000000 100
 button_padding = 0 0
-button_background_id = 6
+button_background_id = 1
 button_centered = 0
 button_max_icon_size = 34
 
@@ -256,7 +256,7 @@ button_max_icon_size = 34
 # Button 2
 button = new
 button_text =
-button_icon = ~/.config/tint2/icons/baka/terminal.png
+button_icon = ~/.icons/Tela-circle/scalable/apps/terminal.svg
 button_tooltip = Terminal
 button_lclick_command = alacritty
 button_rclick_command = alacritty
@@ -266,7 +266,7 @@ button_dwheel_command =
 button_font = Material 17
 button_font_color = #D1D7E2 100
 button_padding = 0 0
-button_background_id = 6
+button_background_id = 1
 button_centered = 1
 button_max_icon_size = 34
 
@@ -274,17 +274,17 @@ button_max_icon_size = 34
 # Button 3
 button = new
 button_text =
-button_icon = ~/.config/tint2/icons/baka/thunar.png
-button_tooltip = Filemanager
-button_lclick_command = thunar
-button_rclick_command = thunar
+button_icon = ~/.icons/Tela-circle/scalable/apps/whatsapp.svg 
+button_tooltip = Whatsapp
+button_lclick_command = firefox web.whatsapp.com
+button_rclick_command = firefox web.whatsapp.com
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 
 button_font = Material 17
 button_font_color = #D1D7E2 100
 button_padding = 0 0
-button_background_id = 6
+button_background_id = 1
 button_centered = 1
 button_max_icon_size = 34
 
@@ -292,8 +292,44 @@ button_max_icon_size = 34
 # Button 4
 button = new
 button_text =
-button_icon = ~/.config/tint2/icons/baka/chromium.png
-button_tooltip = Browser
+button_icon = ~/.icons/Tela-circle/scalable/apps/facebookresource.svg 
+button_tooltip = Facebook
+button_lclick_command = firefox facebook.com
+button_rclick_command = firefox facebook.com
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font = Material 17
+button_font_color = #D1D7E2 100
+button_padding = 0 0
+button_background_id = 1
+button_centered = 1
+button_max_icon_size = 34
+
+#-------------------------------------
+# Button 5
+button = new
+button_text =
+button_icon = ~/.icons/Tela-circle/scalable/apps/youtube.svg
+button_tooltip = Youtube
+button_lclick_command = firefox youtube.com
+button_rclick_command = firefox youtube.com
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font = Material 17
+button_font_color = #D1D7E2 100
+button_padding = 0 0
+button_background_id = 1
+button_centered = 1
+button_max_icon_size = 34
+
+#-------------------------------------
+# Button 6
+button = new
+button_text =
+button_icon = ~/.icons/Tela-circle/scalable/apps/firefox.svg
+button_tooltip = Firefox
 button_lclick_command = firefox
 button_rclick_command = firefox
 button_mclick_command = 
@@ -302,79 +338,7 @@ button_dwheel_command =
 button_font = Material 17
 button_font_color = #D1D7E2 100
 button_padding = 0 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 34
-
-#-------------------------------------
-# Button 5
-button = new
-button_text =
-button_icon = ~/.config/tint2/icons/baka/googlemail.png
-button_tooltip = Gmail
-button_lclick_command = firefox gmail.com
-button_rclick_command = firefox gmail.com
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #D1D7E2 100
-button_padding = 0 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 34
-
-#-------------------------------------
-# Button 6
-button = new
-button_text =
-button_icon = ~/.config/tint2/icons/baka/deviantart.png
-button_tooltip = Devianart
-button_lclick_command = firefox deviantart.com
-button_rclick_command = firefox deviantart.com
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #D1D7E2 100
-button_padding = 0 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 34
-
-#-------------------------------------
-# Button 7
-button = new
-button_text =
-button_icon = ~/.config/tint2/icons/baka/github.png
-button_tooltip = Github
-button_lclick_command = firefox github.com 
-button_rclick_command = firefox github.com
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #D1D7E2 100
-button_padding = 0 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 34
-
-#-------------------------------------
-# Button 8
-button = new
-button_text =
-button_icon = ~/.config/tint2/icons/baka/reddit.png
-button_tooltip = Reddit
-button_lclick_command = firefox reddit.com
-button_rclick_command = firefox reddit.com
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #D1D7E2 100
-button_padding = 0 0
-button_background_id = 6
+button_background_id = 1
 button_centered = 1
 button_max_icon_size = 34
 
