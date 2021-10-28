@@ -269,7 +269,7 @@ function dx
     drone exec $argv
 end
 
-function ssh-A
+function make-ssh
     bash ~/.scripts/ssh
 end
 
