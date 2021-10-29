@@ -22,7 +22,7 @@ border_width = 1
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #F9F9F9 0
+background_color = #F9F9F9 100
 border_color = #1E1E1E 100
 gradient_id = 0
 background_color_hover = #F9F9F9 82
@@ -116,12 +116,12 @@ border_color_pressed = #a1a8b9 0
 
 #-------------------------------------
 # Panel
-panel_items = PPPPPP
+panel_items = :SS:SS:SS:SS:SS:SS::SS::SS::SS::SS::SS::SS::SS:PPPPPP:SS:SS:SS:SS:SS:SS::SS::SS::SS::SS::SS::SS::SS:
 panel_size = 100% 50
 panel_margin = 0 0
 panel_padding = 15 10 10
 panel_background_id = 1
-wm_menu = 0
+wm_menu = 1
 panel_dock = 1
 panel_pivot_struts = 0
 panel_position = bottom center horizontal
@@ -248,6 +248,159 @@ battery_uwheel_command =
 battery_dwheel_command = 
 ac_connected_cmd = 
 ac_disconnected_cmd = 
+
+#-------------------------------------
+# Separator 1
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 2
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 3
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 4
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 5
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 6
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 7
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 8
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 9
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 10
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 11
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 12
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 13
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 14
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 15
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 16
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 17
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 6
+separator_padding = 0 0
 
 #-------------------------------------
 # Button 1
