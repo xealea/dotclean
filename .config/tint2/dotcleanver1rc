@@ -165,10 +165,10 @@ task_align = left
 
 #-------------------------------------
 # Task
-task_text = 1
+task_text = 0
 task_icon = 0
-task_centered = 1
-urgent_nb_of_blink = 1
+task_centered = 0
+urgent_nb_of_blink = 0
 task_maximum_size = 180 0
 task_padding = 24 0 4
 task_font = Noto Sans 8
@@ -179,9 +179,9 @@ task_font_color = #1E1E1E 100
 task_normal_font_color = #1E1E1E 100
 task_active_font_color = #1E1E1E 100
 task_urgent_font_color = #1E1E1E 100
-task_background_id = 2
-task_normal_background_id = 2
-task_active_background_id = 2
+task_background_id = 0
+task_normal_background_id = 0
+task_active_background_id = 0
 mouse_left = toggle_iconify
 mouse_middle = none
 mouse_right = close
