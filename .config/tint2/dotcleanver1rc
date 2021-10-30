@@ -11,10 +11,10 @@ border_content_tint_weight = 0
 background_content_tint_weight = 0
 background_color = #FAFAFA 100
 border_color = #FAFAFA 100
-background_color_hove = #FAFAFA  78
-border_color_hover = #282C34 78
+background_color_hover #F9F9F9 78
+border_color_hover = #1E1E1E 78
 background_color_pressed = #FAFAFA 100
-border_color_pressed = #282C34 100
+border_color_pressed = #1E1E1E 100
 
 # Background 2: Default task
 rounded = 8
@@ -23,12 +23,12 @@ border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
 background_color = #FAFAFA 100
-border_color = #282C34 100
+border_color = #1E1E1E 100
 gradient_id = 0
 background_color_hover = #FAFAFA 82
-border_color_hover = #282C34 82
+border_color_hover = #1E1E1E 82
 background_color_pressed = #FAFAFA 100
-border_color_pressed = #282C34 100
+border_color_pressed = #1E1E1E 100
 
 # Background 3: Active desktop name, Inactive desktop name, Urgent task
 rounded = 6
@@ -175,10 +175,10 @@ task_font = Noto Sans 8
 task_tooltip = 0
 task_thumbnail = 0
 task_thumbnail_size = 0
-task_font_color = #282C34 100
-task_normal_font_color = #282C34 100
-task_active_font_color = #282C34 100
-task_urgent_font_color = #282C34 100
+task_font_color = #1E1E1E 100
+task_normal_font_color = #1E1E1E 100
+task_active_font_color = #1E1E1E 100
+task_urgent_font_color = #1E1E1E 100
 task_background_id = 0
 task_normal_background_id = 0
 task_active_background_id = 0
@@ -255,8 +255,8 @@ button = new
 button_text =
 button_icon = ~/.icons/Tela-circle/scalable/apps/music_icon-24.svg
 button_tooltip = Music
-button_lclick_command = rofi -modi drun -show
-button_rclick_command = rofi -modi drun -show
+button_lclick_command = spotify
+button_rclick_command = spotify
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 

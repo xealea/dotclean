@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	exec jgmenu_run
+	exec rofi -modi drun -show
 
 # make sxhkd reload its configuration files:
 super + Escape
