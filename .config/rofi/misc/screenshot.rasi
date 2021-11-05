@@ -1,10 +1,10 @@
 configuration {
     show-icons:                     true;
-    display-drun: 					"";
+    display-drun: 					"";
     drun-display-format:            "{icon} {name}";
     disable-history:                false;
 	click-to-exit: 					true;
-    location:                       center;
+    location:                       5;
     font:				 	        "Noto Sans 10";
 }
 
@@ -14,34 +14,32 @@ window {
     transparency:                   "real";
     background-color:               @BG;
     text-color:                     @FG;
-    border:                  		0px;
-    border-color:                  	@BGA;
     border-radius:                  10px;
-    width:                          600px;
-    height:                         400px;
-    x-offset:                       0px;
-    y-offset:                       130px;
+    width:                          500px;
+    height:                         250px;
+    x-offset:                       -5;
+    y-offset:                       -55px;
 }
 
 prompt {
     enabled: 						true;
-	margin: 						0px 0px 0px 0px;
+	margin: 						0px 0px 0px 8px;
 	padding: 						8px;
-	background-color: 				@SEL;
-	text-color: 					@BGA;
-    border:                  		0px 0px 0px 0px;
+	background-color: 				@BGA;
+	text-color: 					@FG;
+    border:                  		1px 1px 1px 1px;
     border-color:                  	@BDR;
-    border-radius:                  0px 4px 4px 0px;
+    border-radius:                  6px;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							"O";
-    border-radius:                  4px 0px 0px 4px;
+	str: 							"";
+    border-radius:                  6px;
     background-color:               @SEL;
     text-color:                     @BGA;
-    padding:                        8px 0px 8px 12px;
-	font:							"Noto Sans 10";
+    padding:                        8px 12px 8px 12px;
+	font:				 	        "Noto Sans 10";
 }
 
 entry {
@@ -50,22 +48,21 @@ entry {
     placeholder-color:              @FG;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    "";
+    placeholder:                    "Search...";
     blink:                          true;
-    border:                  		0px 0px 0px 0px;
+    border:                  		0px 0px 2px 0px;
     border-color:                  	@BDR;
     border-radius:                  10px;
     padding:                        8px;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, prompt, entry ];
-    spacing:                        0px;
-    background-color:               @BGA;
+	children: 						[ textbox-prompt-colon, prompt ];
+    background-color:               #00000000;
     text-color:                     @FG;
     expand:                         false;
-    border:                  		1px 1px 1px 1px;
-    border-radius:                  4px;
+    border:                  		0px 0px 0px 0px;
+    border-radius:                  0px;
     border-color:                  	@BDR;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
@@ -81,10 +78,10 @@ case-indicator {
 
 listview {
     background-color:               #00000000;
+    line:	    					2;
     columns:                        2;
-    lines:							7;
-    spacing:                        4px;
-    cycle:                          true;
+    spacing:                        15px;
+    cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
 }
@@ -97,11 +94,13 @@ mainbox {
 }
 
 element {
-    background-color:               #00000000;
+    background-color:               @BGA;
     text-color:                     @FG;
     orientation:                    horizontal;
-    border-radius:                  4px;
-    padding:                        6px 6px 6px 6px;
+    border:                  		1px;
+    border-color:                  	@BDR;
+    border-radius:                  6px;
+    padding:                        15px 6px 15px 6px;
 }
 
 element-icon {
@@ -109,7 +108,7 @@ element-icon {
     text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    size:                           50px;
+    size:                           0px;
     border:                         0px;
 }
 
@@ -117,22 +116,9 @@ element-text {
     background-color: 				inherit;
     text-color:       				inherit;
     expand:                         true;
-    horizontal-align:               0;
-    vertical-align:                 0;
-    margin:                         2px 0px 2px 2px;
-}
-
-element normal.urgent,
-element alternate.urgent {
-    background-color:               @UGT;
-    text-color:                     @FG;
-    border-radius:                  9px;
-}
-
-element normal.active,
-element alternate.active {
-    background-color:               @BGA;
-    text-color:                     @FG;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px;
 }
 
 element selected {
@@ -143,12 +129,24 @@ element selected {
     border-color:                  	@BDR;
 }
 
-element selected.urgent {
-    background-color:               @UGT;
-    text-color:                     @FG;
+element.active,
+element.selected.urgent {
+  background-color: @ON;
+  text-color: @BGA;
+  border-color: @ON;
 }
 
-element selected.active {
-    background-color:               @BGA;
-    color:                          @FG;
+element.selected.urgent {
+  border-color: @BDR;
+}
+
+element.urgent,
+element.selected.active {
+  background-color: @OFF;
+  text-color: @BGA;
+  border-color: @OFF;
+}
+
+element.selected.active {
+  border-color: @BDR;
 }
