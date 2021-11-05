@@ -1,0 +1,37 @@
+#!/bin/bash/env bash
+
+# Rofi Command
+rofi_command="rofi -modi drun -theme ${HOME}/.config/rofi/misc/powermenu.rasi -show"
+
+# Border
+s1="logout"
+s2="reboot"
+s3="suspend"
+s4="poweroff"
+
+# Variable passed to rofi
+options="$s1\n$s2\n$s3\n$s4"
+
+chosen="$(echo -e "$options" | $rofi_command -p "select what do you want" -dmenu -sync -selected-row 0)"
+case $chosen in
+    $s1)
+        dunstify "logout the system"
+        sleep 2
+        loginctl exit
+        ;;
+    $s2)
+        dunstify "reboot the system"
+        sleep 2
+        loginctl reboot
+        ;;
+    $s3)
+        dunstify "suspend the system"
+        sleep 2
+        loginctl suspend
+        ;;
+    $s4)
+        dunstify "poweroff the system"
+        sleep 2
+        loginctl poweroff
+        ;;
+esac

@@ -1,13 +1,13 @@
 configuration {
     show-icons:                     true;
-    display-drun: 					"";
+    display-drun: 					"";
     drun-display-format:            "{icon} {name}";
     disable-history:                false;
 	click-to-exit: 					true;
-    location:                       center;
-    font:				 	        "Noto Sans 10";
+    location:                       5;
 }
 
+@import "font.rasi"
 @import "colors.rasi"
 
 window {
@@ -17,10 +17,9 @@ window {
     border:                  		0px;
     border-color:                  	@BGA;
     border-radius:                  10px;
-    width:                          600px;
-    height:                         400px;
-    x-offset:                       0px;
-    y-offset:                       125px;
+    width:                          400px;
+    x-offset:                       -8;
+    y-offset:                       -60px;
 }
 
 prompt {
@@ -36,12 +35,12 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							"O";
+	str: 							"直";
     border-radius:                  4px 0px 0px 4px;
     background-color:               @SEL;
     text-color:                     @BGA;
     padding:                        8px 0px 8px 12px;
-	font:							"Noto Sans 10";
+	font:							"Iosevka Nerd Font 10";
 }
 
 entry {
@@ -81,7 +80,7 @@ case-indicator {
 
 listview {
     background-color:               #00000000;
-    columns:                        2;
+    columns:                        1;
     lines:							7;
     spacing:                        4px;
     cycle:                          true;
@@ -109,7 +108,7 @@ element-icon {
     text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    size:                           50px;
+    size:                           0px;
     border:                         0px;
 }
 

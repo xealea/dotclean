@@ -10,9 +10,17 @@ super + Return
 super + @space
 	exec rofi -modi drun -show
 
-# program launcher
+# program screenshots
 super + s
-    bash ~/.scripts/screenshots
+    bash ${HOME}/.scripts/screenshots
+
+# program powermenu
+super + x
+    bash ${HOME}/.scripts/powermenu
+
+# program network
+super + n
+    bash ${HOME}/.scripts/network
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -160,14 +168,3 @@ alt + XF86AudioLowerVolume
 XF86AudioMute
 	bash ${HOME}/.scripts/mute
 
-# screenshot now
-Print
-    bash ${HOME}/.scripts/screenshot
-
-# screenshot 3sec
-5 + Print
-    bash ${HOME}/.scripts/screenshot-5sec
-
-# screenshot with border
-alt + Print
-    bash ${HOME}/.scripts/selfdraw.sh
