@@ -11,7 +11,7 @@ super + @space
 	exec rofi -modi drun -show
 
 # program screenshots
-super + s
+super + p
     bash ${HOME}/.scripts/screenshots
 
 # program powermenu
