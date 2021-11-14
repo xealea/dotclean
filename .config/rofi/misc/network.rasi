@@ -7,7 +7,6 @@ configuration {
     location:                       5;
 }
 
-@import "font.rasi"
 @import "colors.rasi"
 
 window {
