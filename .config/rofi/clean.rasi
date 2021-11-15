@@ -1,15 +1,4 @@
-configuration {
-    show-icons:                     true;
-    display-drun: 					"applications";
-    drun-display-format:            "{icon} {name}";
-    disable-history:                false;
-	click-to-exit: 					true;
-    location:                       center;
-    font:				 	        "Noto Sans 10";
-}
-
 @import "colors.rasi"
-@theme "clean.rasi"
 
 window {
     background-color:               @BG;
@@ -151,4 +140,3 @@ element.alternate.active {
     background-color: @BG;
     text-color:       @FG;
 }
-
