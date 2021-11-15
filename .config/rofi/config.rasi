@@ -35,7 +35,7 @@ prompt {
 
 textbox-prompt-colon {
     expand: 		            false;
-    str: 			    "";
+    str: 			    "";
     border-radius:                  6px;
     background-color:               @SEL;
     text-color:                     @BGA;
@@ -51,14 +51,14 @@ entry {
     horizontal-align:               0;
     placeholder:                    "Search...";
     blink:                          true;
-    border:                  		0px 0px 2px 0px;
+    border:                  		1px 1px 1px 1px;
     border-color:                  	@BDR;
-    border-radius:                  10px;
+    border-radius:                  8px;
     padding:                        8px;
 }
 
 inputbar {
-    children: 			            [ textbox-prompt-colon,prompt ];
+    children: 			            [ textbox-prompt-colon,entry,case-indicator ];
     background-color:               #00000000;
     text-color:                     @FG;
     expand:                         false;
