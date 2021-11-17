@@ -4,8 +4,8 @@
 rofi_command="rofi -lines 2 -theme ${HOME}/.config/rofi/misc/misc.rasi"
 
 # Themes
-theme_0="light"
-theme_1="dark"
+theme_0="dark"
+theme_1="light"
 
 # Variable passed to rofi
 options="$theme_0\n$theme_1"
@@ -22,7 +22,7 @@ case $chosen in
         sed -i -e 's/light/dark/g' ${HOME}/.config/gtk-3.0/settings.ini
         sed -i -e 's/background = "#FAFAFA"/background = "#282C34"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/foreground = "#282C34"/foreground = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
-        sed -i -e 's/light/light/g' ${HOME}/.config/bspwm/bspwmrc
+        sed -i -e 's/light/dark/g' ${HOME}/.config/bspwm/bspwmrc
         # Kill terminal --------------------------------
         kill $USR1 kitty
         # ----------------------------------------------
