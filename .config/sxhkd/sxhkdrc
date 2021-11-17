@@ -12,7 +12,7 @@ super + @space
 
 # program theme
 super + z
-    bash ${HOME}/.scripts/border
+    bash ${HOME}/.scripts/theme
 
 # program screenshots
 super + p
