@@ -16,7 +16,7 @@ super + z
 
 # program screenshots
 super + p
-    bash ${HOME}/.scripts/theme
+    bash ${HOME}/.scripts/screenshot
 
 # program powermenu
 super + x
