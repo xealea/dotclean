@@ -1,0 +1,47 @@
+#!/bin/bash/env
+
+# Rofi Command
+rofi_command="rofi -lines 2 -theme ${HOME}/.config/rofi/misc/misc.rasi"
+
+# Themes
+theme_0="light"
+theme_1="dark"
+
+# Variable passed to rofi
+options="$theme_0\n$theme_1"
+
+chosen="$(echo -e "$options" | $rofi_command -p "themes" -show -dmenu -sync -selected-row 0)"
+case $chosen in
+    $theme_0)y
+	# Kill Process if running ----------------------
+        kill kitty sxhkd dunst tint2
+        # ----------------------------------------------
+        sed -i -e 's/light/dark/g' ${HOME}/.xsettingsd
+        sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/config.rasi
+        sed -i -e 's/light/dark/g' ${HOME}/.config/kitty/kitty.conf
+        sed -i -e 's/light/dark/g' ${HOME}/.config/gtk-3.0/settings.ini
+        sed -i -e 's/background = "#FAFAFA"/background = "#282C34"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/foreground = "#282C34"/foreground = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/light/light/g' ${HOME}/.config/bspwm/bspwmrc
+        # Kill terminal --------------------------------
+        kill $USR1 kitty
+        # ----------------------------------------------
+        bspc wm -r
+        ;;
+    $theme_1)
+	# Kill Process if running ----------------------
+        kill kitty sxhkd dunst tint2
+        # ----------------------------------------------
+        sed -i -e 's/dark/light/g' ${HOME}/.xsettingsd
+        sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/config.rasi
+        sed -i -e 's/dark/light/g' ${HOME}/.config/kitty/kitty.conf
+        sed -i -e 's/dark/light/g' ${HOME}/.config/gtk-3.0/settings.ini
+        sed -i -e 's/background = "#282C34"/background = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/foreground = "#FAFAFA"/foreground = "#282C34"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/dark/light/g' ${HOME}/.config/bspwm/bspwmrc
+        # Kill terminal --------------------------------
+        kill $USR1 kitty
+        # ----------------------------------------------
+        bspc wm -r
+        ;;
+esac

@@ -10,9 +10,13 @@ super + Return
 super + @space
 	exec rofi -modi drun -show
 
+# program theme
+super + z
+    bash ${HOME}/.scripts/border
+
 # program screenshots
 super + p
-    bash ${HOME}/.scripts/screenshots
+    bash ${HOME}/.scripts/theme
 
 # program powermenu
 super + x
