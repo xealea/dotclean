@@ -25,8 +25,8 @@ case $chosen in
         sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/misc/network.rasi
         sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/misc/powermenu.rasi
         sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/misc/screenshot.rasi
-        sed -i -e 's/background = "#FAFAFA"/background = "#282C34"/g' ${HOME}/.config/dunst/dunstrc
-        sed -i -e 's/foreground = "#282C34"/foreground = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/background = "#FAFAFA"/background = "#161718"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/foreground = "#161718"/foreground = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/light/dark/g' ${HOME}/.config/bspwm/bspwmrc
         # Kill terminal --------------------------------
         kill $USR1 kitty
@@ -46,8 +46,8 @@ case $chosen in
         sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/misc/network.rasi
         sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/misc/powermenu.rasi
         sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/misc/screenshot.rasi
-        sed -i -e 's/background = "#282C34"/background = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
-        sed -i -e 's/foreground = "#FAFAFA"/foreground = "#282C34"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/background = "#161718"/background = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
+        sed -i -e 's/foreground = "#FAFAFA"/foreground = "#161718"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/dark/light/g' ${HOME}/.config/bspwm/bspwmrc
         # Kill terminal --------------------------------
         kill $USR1 kitty
