@@ -17,6 +17,7 @@ case $chosen in
         kill kitty sxhkd dunst tint2
         # ----------------------------------------------
         sed -i -e 's/light/dark/g' ${HOME}/.xsettingsd
+        sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/clean.rasi
         sed -i -e 's/light/dark/g' ${HOME}/.config/rofi/config.rasi
         sed -i -e 's/light/dark/g' ${HOME}/.config/kitty/kitty.conf
         sed -i -e 's/light/dark/g' ${HOME}/.config/gtk-3.0/settings.ini
@@ -33,10 +34,11 @@ case $chosen in
         bspc wm -r
         ;;
     $theme_1)
-	# Kill Process if running ----------------------
+	    # Kill Process if running ----------------------
         kill kitty sxhkd dunst tint2
         # ----------------------------------------------
         sed -i -e 's/dark/light/g' ${HOME}/.xsettingsd
+        sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/clean.rasi
         sed -i -e 's/dark/light/g' ${HOME}/.config/rofi/config.rasi
         sed -i -e 's/dark/light/g' ${HOME}/.config/kitty/kitty.conf
         sed -i -e 's/dark/light/g' ${HOME}/.config/gtk-3.0/settings.ini
