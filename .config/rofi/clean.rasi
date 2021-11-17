@@ -1,4 +1,4 @@
-@import "colors.rasi"
+@import "light.rasi"
 
 window {
     background-color:               @BG;

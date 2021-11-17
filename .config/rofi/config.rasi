@@ -8,7 +8,7 @@ configuration {
     font:				 	        "Noto Sans 10";
 }
 
-@import "colors.rasi"
+@import "light.rasi"
 @theme "clean.rasi"
 
 window {

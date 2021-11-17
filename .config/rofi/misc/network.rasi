@@ -7,7 +7,7 @@ configuration {
     location:                       5;
 }
 
-@import "colors.rasi"
+@import "light.rasi"
 
 window {
     transparency:                   "real";
