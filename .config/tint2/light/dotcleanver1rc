@@ -4,7 +4,7 @@
 #-------------------------------------
 # Backgrounds
 # Background 1: Active task
-rounded = 8
+rounded = 0
 border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
@@ -17,7 +17,7 @@ background_color_pressed = #FAFAFA 100
 border_color_pressed = #1E1E1E 100
 
 # Background 2: Default task
-rounded = 8
+rounded = 6
 border_width = 1
 border_sides = TBLR
 border_content_tint_weight = 0
@@ -116,13 +116,13 @@ border_color_pressed = #a1a8b9 0
 
 #-------------------------------------
 # Panel
-panel_items = PPPPPP
+panel_items = SPPPPPSTSPC
 panel_size = 100% 50
 panel_margin = 0 0
-panel_padding = 570% 10 10
+panel_padding = 5 5 5
 panel_background_id = 1
 wm_menu = 1
-panel_dock = 1
+panel_dock = 0
 panel_pivot_struts = 0
 panel_position = bottom center horizontal
 panel_layer = center
@@ -145,8 +145,8 @@ scale_relative_to_screen_height = 0
 #-------------------------------------
 # Taskbar
 taskbar_mode = 
-taskbar_hide_if_empty = 0
-taskbar_padding = 0 0 8
+taskbar_hide_if_empty = 1
+taskbar_padding = 0 0 0
 taskbar_background_id = 0
 taskbar_active_background_id = 0
 taskbar_name = 0
@@ -165,23 +165,23 @@ task_align =
 
 #-------------------------------------
 # Task
-task_text = 0
+task_text = 1
 task_icon = 0
-task_centered = 0
-urgent_nb_of_blink = 0
+task_centered = 1
+urgent_nb_of_blink = 100000
 task_maximum_size = 0 0
-task_padding = 0 0 0
+task_padding = 5 5 5
 task_font = Noto Sans 8
-task_tooltip = 0
-task_thumbnail = 0
-task_thumbnail_size = 0
+task_tooltip = 1
+task_thumbnail = 24
+task_thumbnail_size = 200
 task_font_color = #1E1E1E 100
 task_normal_font_color = #1E1E1E 100
 task_active_font_color = #1E1E1E 100
 task_urgent_font_color = #1E1E1E 100
-task_background_id = 0
-task_normal_background_id = 0
-task_active_background_id = 0
+task_background_id = 1
+task_normal_background_id = 2
+task_active_background_id = 2
 mouse_left = none
 mouse_middle = none
 mouse_right = none
@@ -193,8 +193,8 @@ mouse_scroll_down = none
 systray_padding = 0 0 0
 systray_background_id = 0
 systray_sort = ascending
-systray_icon_size = 0
-systray_icon_asb = 100 0 10
+systray_icon_size = 24
+systray_icon_asb = 10 0 10
 systray_monitor = 0
 systray_name_filter = 
 
@@ -212,7 +212,7 @@ launcher_tooltip = 0
 
 #-------------------------------------
 # Clock
-time1_format = 
+time1_format = %H:%M
 time2_format = 
 time1_font = Noto Sans 12.5
 time1_timezone = 
@@ -233,7 +233,7 @@ clock_dwheel_command =
 # Battery
 battery_tooltip = 1
 battery_low_status = 0
-battery_low_cmd = 
+battery_low_cmd = notify-send "battery low"
 battery_full_cmd = 
 battery_font_color = #000000 100
 bat1_format = 
@@ -250,13 +250,103 @@ ac_connected_cmd =
 ac_disconnected_cmd = 
 
 #-------------------------------------
+# Separator 1
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 2
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 3
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 4
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 5
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 6
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 7
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 8
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 9
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
+# Separator 10
+separator = new
+separator_background_id = 0
+separator_color = #f9f9f9 0
+separator_style = empty
+separator_size = 50
+separator_padding = 0 0
+
+#-------------------------------------
 # Button 1
 button = new
 button_text =
-button_icon = ~/.icons/Tela-circle/scalable/apps/music_icon-24.svg
-button_tooltip = Music
-button_lclick_command = spotify
-button_rclick_command = spotify
+button_icon = ~/.icons/Tela-circle/scalable/apps/app.svg
+button_tooltip = Launcher
+button_lclick_command = rofi -modi drun -show
+button_rclick_command = rofi -modi drun -show
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 
@@ -271,10 +361,10 @@ button_max_icon_size = 34
 # Button 2
 button = new
 button_text =
-button_icon = ~/.icons/Tela-circle/scalable/apps/terminal.svg
-button_tooltip = Terminal
-button_lclick_command = kitty
-button_rclick_command = kitty
+button_icon = ~/.icons/Tela-circle/scalable/apps/wxlame.svg
+button_tooltip = Floating
+button_lclick_command = skippy-xd
+button_rclick_command = skippy-xs
 button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 
@@ -343,18 +433,18 @@ button_max_icon_size = 34
 # Button 6
 button = new
 button_text =
-button_icon = ~/.icons/Tela-circle/scalable/apps/firefox.svg
-button_tooltip = Firefox
-button_lclick_command = firefox
-button_rclick_command = firefox
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
+button_icon = ~/.icons/Tela-circle/scalable/devices/network-wireless.svg
+button_tooltip = Music
+button_lclick_command = bash ${HOME}/.scripts/network
+button_rclick_command = bash ${HOME}/.scripts/network
+button_mclick_command =
+button_uwheel_command =
+button_dwheel_command =
 button_font = Material 17
-button_font_color = #D1D7E2 100
+button_font_color = #000000 100
 button_padding = 0 0
 button_background_id = 1
-button_centered = 1
+button_centered = 0
 button_max_icon_size = 34
 
 #-------------------------------------
