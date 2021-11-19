@@ -28,7 +28,7 @@ case $chosen in
         sed -i -e 's/background = "#FAFAFA"/background = "#030303"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/foreground = "#030303"/foreground = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/light/dark/g' ${HOME}/.config/bspwm/bspwmrc
-        sed -i -e 's/mountain.jpg/rock.jpg/g' ${HOME}/.fehbg
+        sed -i -e 's/mountain.jpg/tree.jpg/g' ${HOME}/.fehbg
         # Kill terminal --------------------------------
         kill $USR1 kitty
         # ----------------------------------------------
@@ -50,7 +50,7 @@ case $chosen in
         sed -i -e 's/background = "#030303"/background = "#FAFAFA"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/foreground = "#FAFAFA"/foreground = "#030303"/g' ${HOME}/.config/dunst/dunstrc
         sed -i -e 's/dark/light/g' ${HOME}/.config/bspwm/bspwmrc
-        sed -i -e 's/rock.jpg/mountain.jpg/g' ${HOME}/.fehbg
+        sed -i -e 's/tree.jpg/mountain.jpg/g' ${HOME}/.fehbg
         # Kill terminal --------------------------------
         kill $USR1 kitty
         # ----------------------------------------------
