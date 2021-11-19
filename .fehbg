@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill ${HOME}/.wallpaper/dotclean.jpg
+feh --no-fehbg --bg-fill ${HOME}/.wallpaper/mountain.jpg
