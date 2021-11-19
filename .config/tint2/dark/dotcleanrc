@@ -9,12 +9,12 @@ border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #161718 100
-border_color = #161718 100
-background_color_hover #161718 78
-border_color_hover = #161718 78
-background_color_pressed = #161718 100
-border_color_pressed = #161718 100
+background_color = #030303 100
+border_color = #030303 100
+background_color_hover #030303 78
+border_color_hover = #030303 78
+background_color_pressed = #030303 100
+border_color_pressed = #030303 100
 
 # Background 2: Default task
 rounded = 8
@@ -22,13 +22,13 @@ border_width = 1
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #161718 0
-border_color = #161718 100
+background_color = #030303 0
+border_color = #030303 100
 gradient_id = 0
-background_color_hover = #161718 82
-border_color_hover = #161718 82
-background_color_pressed = #161718 100
-border_color_pressed = #161718 100
+background_color_hover = #030303 82
+border_color_hover = #030303 82
+background_color_pressed = #030303 100
+border_color_pressed = #030303 100
 
 # Background 3: Active desktop name, Inactive desktop name, Urgent task
 rounded = 6
@@ -175,10 +175,10 @@ task_font = Noto Sans 8
 task_tooltip = 0
 task_thumbnail = 0
 task_thumbnail_size = 210
-task_font_color = #161718 100
-task_normal_font_color = #161718 100
-task_active_font_color = #161718 100
-task_urgent_font_color = #161718 100
+task_font_color = #030303 100
+task_normal_font_color = #030303 100
+task_active_font_color = #030303 100
+task_urgent_font_color = #030303 100
 task_background_id = 2
 task_normal_background_id = 2
 task_active_background_id = 2

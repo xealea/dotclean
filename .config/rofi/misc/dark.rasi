@@ -1,11 +1,11 @@
 * {
-BG:    #161718ff;
-BGA:   #161718ff;
+BG:    #030303ff;
+BGA:   #030303ff;
 FG:    #FAFAFAff;
 BDR:   #EBEBEBff;
 SEL:   #FAFAFAff;
-UGT:   #161718ff;
-IMG:   #161718ff;
+UGT:   #030303ff;
+IMG:   #030303ff;
 ON:    #1F6E42ff;
 OFF:   #CB3F21ff;
 }
