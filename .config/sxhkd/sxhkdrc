@@ -10,8 +10,8 @@ super + Return
 super + @space
 	exec rofi -modi drun -show
 
-# program theme
-super + shift
+# program search
+super + m
     bash ${HOME}/.scripts/search
      
 # program theme
