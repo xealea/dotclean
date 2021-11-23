@@ -11,6 +11,10 @@ super + @space
 	exec rofi -modi drun -show
 
 # program theme
+super + shift
+    bash ${HOME}/.scripts/search
+     
+# program theme
 super + z
     bash ${HOME}/.scripts/theme
 
