@@ -1,186 +1,192 @@
-#
-# wm independent hotkeys
-#
+#!/bin/bash
 
-# terminal emulator
+# WM Independent Hotkeys
+
+# Terminal Emulator
 super + Return
-	kitty
+    kitty
 
-# program launcher
-super + @space
-	exec rofi -modi drun -show
+# Program Launcher
+super
+    exec rofi -modi drun -show
 
-# program search
+# Program Search
 super + m
-    bash ${HOME}/.scripts/search
-     
-# program theme
+    bash "${HOME}/.scripts/search"
+
+# Program Theme
 super + z
-    bash ${HOME}/.scripts/theme
+    bash "${HOME}/.scripts/theme"
 
-# program screenshots
-super + p
-    bash ${HOME}/.scripts/screenshots
+# Program Screenshots
+super + s
+    bash "${HOME}/.scripts/screenshots"
 
-# program powermenu
+# Program Powermenu
 super + x
-    bash ${HOME}/.scripts/powermenu
+    bash "${HOME}/.scripts/powermenu"
 
-# program network
+# Program Network
 super + n
-    bash ${HOME}/.scripts/network
+    bash "${HOME}/.scripts/network"
 
-# program compositor
+# Program Compositor
 super + c
-    bash ${HOME}/.scripts/comp
+    bash "${HOME}/.scripts/comp"
 
-# program border
+# Program Border
 super + b
-    bash ${HOME}/.scripts/border
+    bash "${HOME}/.scripts/border"
 
-# make sxhkd reload its configuration files:
+# Reload sxhkd Configuration
 super + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+# BSPWM Hotkeys
 
-# quit/restart bspwm
+# Quit/Restart BSPWM
 super + alt + {q,r}
-	bspc {quit,wm -r}
+    bspc {quit,wm -r}
 
-# close and kill
+# Close and Kill
 super + {_,shift + }w
-	bspc node -{c,k}
+    bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+# Toggle Tiled and Monocle Layout
 super + m
-	bspc desktop -l next
+    bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
+# Swap Marked Node with Preselected Node
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+    bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
+# Swap Current Node with Biggest Window
 super + g
-	bspc node -s biggest.window
+    bspc node -s biggest.window
 
-#
-# state/flags
-#
+# State/Flags
 
-# set the window state
+# Set Window State
 super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the node flags
+# Set Node Flags
 super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+    bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-#
+# Focus/Swap
 
-# focus the node in the given direction
+# Focus Node in Given Direction
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+    bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
+# Focus Node for Path Jump
 super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+    bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous window in the current desktop
+# Focus Next/Previous Window in Current Desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+    bspc node -f {next,prev}.local.!hidden.window
 
-# focus the next/previous desktop in the current monitor
+# Focus Next/Previous Desktop in Current Monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+    bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
+# Focus Last Node/Desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last
+    bspc {node,desktop} -f last
 
-# focus the older or newer node in the focus history
+# Focus Older or Newer Node in Focus History
 super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+    bspc wm -h off; \
+    bspc node {older,newer} -f; \
+    bspc wm -h on
 
-# focus or send to the given desktop
+# Focus or Send to Given Desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+    bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
-# preselect
-#
+# Preselect
 
-# preselect the direction
+# Preselect Direction
 super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+    bspc node -p {west,south,north,east}
 
-# preselect the ratio
+# Preselect Ratio
 super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+    bspc node -o 0.{1-9}
 
-# cancel the preselection for the focused node
+# Cancel Preselection for Focused Node
 super + ctrl + space
-	bspc node -p cancel
+    bspc node -p cancel
 
-# cancel the preselection for the focused desktop
+# Cancel Preselection for Focused Desktop
 super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
+# Move/Resize
 
-# expand a window by moving one of its side outward
+# Expand a Window by Moving a Side Outward
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# contract a window by moving one of its side inward
+# Contract a Window by Moving a Side Inward
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# move a floating window
+# Move a Floating Window
 super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# brightness
+# Brightness
+
+# Brightness Up
 XF86MonBrightnessUp
-	xbacklight -inc 1; \
-	dunstify "盛 Brigthness Up:" -h int:value:(xbacklight -get | cut -f 1 -d '.') -t 1000 -r 1
+    xbacklight -inc 1; \
+    dunstify "盛 Brightness Up:" -h int:value:$(xbacklight -get | cut -f 1 -d '.') -t 1000 -r 1
 
+# Brightness Down
 XF86MonBrightnessDown
-	xbacklight -dec 1; \
-	dunstify "滛 Brigthness Down:" -h int:value:(xbacklight -get | cut -f 1 -d '.') -t 1000 -r 1
+    xbacklight -dec 1; \
+    dunstify "滛 Brightness Down:" -h int:value:$(xbacklight -get | cut -f 1 -d '.') -t 1000 -r 1
 
-# pulseaudio controls speaker volume up & down
+# Pipewire Controls Speaker Volume
+
+# Volume Up
 XF86AudioRaiseVolume
-	pamixer --increase 1; \
-	dunstify "  Increase Volume:" -h int:value:(pamixer --get-volume) -t 1000 -r 1
+    pactl set-sink-volume @DEFAULT_SINK@ +1%; \
+    dunstify " Increase Volume:" -h int:value:$(pactl list sinks | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
+# Volume Down
 XF86AudioLowerVolume
-	pamixer --decrease 1; \
-	dunstify "奔 Decrease Volume:" -h int:value:(pamixer --get-volume) -t 1000 -r 1
+    pactl set-sink-volume @DEFAULT_SINK@ -1%; \
+    dunstify "奔 Decrease Volume:" -h int:value:$(pactl list sinks | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
-# pulseaudio controls mic volume up & down
+# Pipewire Controls Mic Volume
+
+# Mic Volume Up
 shift + XF86AudioRaiseVolume
-	pamixer --source 1 -i 1
+    pactl set-source-volume @DEFAULT_SOURCE@ +1%; \
+    dunstify " Mic Volume Up:" -h int:value:$(pactl list sources | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
+# Mic Volume Down
 shift + XF86AudioLowerVolume
-	pamixer --source 1 -d 1
+    pactl set-source-volume @DEFAULT_SOURCE@ -1%; \
+    dunstify " Mic Volume Down:" -h int:value:$(pactl list sources | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
-# pulseaudio controls monitor volume up & down
+# Pipewire Controls Monitor Volume
+
+# Monitor Volume Up
 alt + XF86AudioRaiseVolume
-	pamixer --source 0 -i 1
+    pactl set-source-volume @DEFAULT_SOURCE@ +1%; \
+    dunstify "奔 Monitor Volume Up:" -h int:value:$(pactl list sources | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
+# Monitor Volume Down
 alt + XF86AudioLowerVolume
-	pamixer --source 0 -d 1
-	
-# pulseaudio controls mute speaker
-XF86AudioMute
-	bash ${HOME}/.scripts/mute
+    pactl set-source-volume @DEFAULT_SOURCE@ -1%; \
+    dunstify "奔 Monitor Volume Down:" -h int:value:$(pactl list sources | grep 'Volume:' | head -n 1 | awk -F / '{print $2}' | sed 's/ %//') -t 1000 -r 1
 
+# Mute Speaker
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    dunstify "婢 Mute/Unmute Speaker:" -h int:value:$(pactl list sinks | grep 'Mute:' | head -n 1 | awk '{print $2}') -t 1000 -r 1
