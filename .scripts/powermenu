@@ -1,37 +1,41 @@
-#!/bin/bash/env bash
+#!/bin/bash
 
 # Rofi Command
 rofi_command="rofi -modi drun -theme ${HOME}/.config/rofi/misc/powermenu.rasi -show"
 
-# Border
-s1="logout"
-s2="reboot"
-s3="suspend"
-s4="poweroff"
+# Options
+options=("Logout" "Reboot" "Suspend" "Poweroff")
 
-# Variable passed to rofi
-options="$s1\n$s2\n$s3\n$s4"
+# Prompt
+prompt="Select an option:"
 
-chosen="$(echo -e "$options" | $rofi_command -p "select what do you want" -dmenu -sync -selected-row 0)"
+# Get the user's choice using rofi
+chosen=$(printf "%s\n" "${options[@]}" | $rofi_command -p "$prompt" -dmenu -selected-row 0)
+
+# Perform actions based on the user's choice
 case $chosen in
-    $s1)
-        dunstify "logout the system"
-        sleep 2
-        loginctl exit
+    "Logout")
+        action="exit"
+        message="Logout the system"
         ;;
-    $s2)
-        dunstify "reboot the system"
-        sleep 2
-        loginctl reboot
+    "Reboot")
+        action="reboot"
+        message="Reboot the system"
         ;;
-    $s3)
-        dunstify "suspend the system"
-        sleep 2
-        loginctl suspend
+    "Suspend")
+        action="suspend"
+        message="Suspend the system"
         ;;
-    $s4)
-        dunstify "poweroff the system"
-        sleep 2
-        loginctl poweroff
+    "Poweroff")
+        action="poweroff"
+        message="Power off the system"
+        ;;
+    *)
+        exit 0
         ;;
 esac
+
+# Display a notification and perform the selected action
+dunstify "$message"
+sleep 2
+loginctl $action
