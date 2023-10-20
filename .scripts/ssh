@@ -5,39 +5,34 @@ msg() {
     echo -e "\e[1;32m$*\e[0m"
 }
 
-# Run all argument
-function do_all() {
-    do_make
-    do_agent
-    do_grep
-    do_test
-}
-    
-# Init Make
-function do_make() {
+# Function to generate an SSH key and add it to the agent
+generate_and_add_ssh_key() {
     msg "Write Your Account here: Example 12345@gmail.com"
     read -e ACCOUNT
     ssh-keygen -t ed25519 -C "$ACCOUNT"
-}
-
-# Agent ssh
-function do_agent() {
     msg "Connect To Agent"
-    eval `ssh-agent -s`
+    eval $(ssh-agent -s)
     ssh-add
 }
 
-# Grep and show ssh
-function do_grep() {
+# Function to display the SSH key
+show_ssh_key() {
     msg "Grep Your Ssh"
     cat ~/.ssh/id_ed25519.pub
 }
 
-# Testing connection
-function do_test() {
+# Function to test the SSH connection to GitHub
+test_ssh_connection() {
     msg "Testing Connect Ssh Github"
     ssh -T git@github.com
     msg "Yeayy Your Ssh Working Properly Now"
 }
 
-do_all
+# Main function to run all steps
+main() {
+    generate_and_add_ssh_key
+    show_ssh_key
+    test_ssh_connection
+}
+
+main
