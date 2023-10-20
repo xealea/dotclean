@@ -1,27 +1,10 @@
 #!/usr/bin/env bash
 
-# -----------------------------------------------------------------------------
-# Info:
-#   author:    Miroslav Vidovic
-#   file:      web-search.sh
-#   created:   24.02.2017.-08:59:54
-#   revision:  ---
-#   version:   1.0
-# -----------------------------------------------------------------------------
-# Requirements:
-#   rofi
-# Description:
-#   Use rofi to search the web.
-# Usage:
-#   web-search.sh
-# -----------------------------------------------------------------------------
-# Script:
-
+# Set the rofi theme
 THEMER="$HOME/.config/rofi/misc/search.rasi"
 
-declare -A URLS
-
-URLS=(
+# Define search engines and their URLs
+declare -A URLS=(
   ["google"]="https://www.google.com/search?q="
   ["bing"]="https://www.bing.com/search?q="
   ["yahoo"]="https://search.yahoo.com/search?p="
@@ -42,28 +25,30 @@ URLS=(
   ["vimawesome"]="http://vimawesome.com/?q="
 )
 
-# List for rofi
+# Create a list of search engine names for rofi
 gen_list() {
-    for i in "${!URLS[@]}"
-    do
-      echo "$i"
-    done
+  for engine in "${!URLS[@]}"; do
+    echo "$engine"
+  done
 }
 
+# Main function for the script
 main() {
-  # Pass the list to rofi
-  platform=$( (gen_list) | rofi -dmenu -modi drun -theme $THEMER -show -matching fuzzy -no-custom -p "Search > " )
+  # Choose a search engine using rofi
+  platform=$(gen_list | rofi -dmenu -modi drun -theme "$THEMER" -show -matching fuzzy -no-custom -p "Search > ")
 
+  # Check if a search engine was selected
   if [[ -n "$platform" ]]; then
-    query=$( (echo ) | rofi -dmenu -modi drun -theme $THEMER -show -matching fuzzy -p "Query > " )
+    # Input the search query
+    query=$(rofi -dmenu -modi drun -theme "$THEMER" -show -matching fuzzy -p "Query > ")
 
+    # Check if a query was provided
     if [[ -n "$query" ]]; then
-      url=${URLS[$platform]}$query
+      url="${URLS[$platform]}$query"
       xdg-open "$url"
     else
       exit
     fi
-
   else
     exit
   fi
